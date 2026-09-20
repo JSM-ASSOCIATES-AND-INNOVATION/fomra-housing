@@ -3,16 +3,14 @@ import { MapPin, PhoneCall, ArrowRight, ShieldCheck, Banknote, Clock } from 'luc
 
 const FomraHero = () => {
   return (
-    <div className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-visible bg-slate-900">
+    <div className="relative w-full h-screen min-h-[500px] flex items-center justify-center overflow-visible bg-slate-900">
       
       {/* Cinematic Background Image with Slow Zoom */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Dark Overlays for Text Readability */}
         <div className="absolute inset-0 bg-slate-900/30 z-10 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-transparent z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent z-10"></div>
         
-        {/* Luxury Real Estate Image from Unsplash */}
         <img 
           src="/real-building.png" 
           alt="Fomra Hues Premium Apartments" 
@@ -20,45 +18,45 @@ const FomraHero = () => {
         />
       </div>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center h-full pt-10">
-        <div className="max-w-3xl space-y-8">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center h-full pt-16 sm:pt-10">
+        <div className="max-w-3xl space-y-5 sm:space-y-8">
           
           <div className="animate-fade-in-up">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-[0.2em] uppercase shadow-lg">
-              <span className="w-2 h-2 rounded-full bg-fomra-blue animate-pulse"></span>
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase shadow-lg">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-fomra-blue animate-pulse"></span>
               Premium Chennai Real Estate
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             Build Your Dream on a <br className="hidden md:block"/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fomra-blue">Solid Foundation.</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-300 font-medium max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-            Exclusive CMDA & RERA approved ready-to-build villa plots. Secure your family's future in Chennai's fastest-growing corridors with Fomra.
+          <p className="text-sm sm:text-lg md:text-xl text-slate-300 font-medium max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            Exclusive CMDA & RERA approved ready-to-build villa plots. Secure your family's future in Chennai's fastest-growing corridors.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center gap-5 pt-4 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5 pt-2 sm:pt-4 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
             <a 
               href="tel:+919585397000" 
-              className="flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-fomra-blue text-white text-[15px] font-bold tracking-wide uppercase hover:bg-cyan-500 transition-all duration-300 transform hover:-translate-y-1 shadow-glow"
+              className="flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-fomra-blue text-white text-sm sm:text-[15px] font-bold tracking-wide uppercase hover:bg-cyan-500 transition-all duration-300 transform hover:-translate-y-1 shadow-glow"
             >
-              <PhoneCall size={18} />
+              <PhoneCall size={16} />
               Enquire Now
             </a>
             <a 
               href="#projects-section" 
-              className="group flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-fomra-dark text-[15px] font-bold tracking-wide uppercase transition-all duration-300"
+              className="group flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-fomra-dark text-sm sm:text-[15px] font-bold tracking-wide uppercase transition-all duration-300"
             >
               Explore Projects
-              <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Floating Features Bar (Overlaps next section) */}
+      {/* Floating Features Bar — Desktop Only */}
       <div className="absolute bottom-0 left-0 w-full z-30 transform translate-y-1/2 hidden lg:block">
         <div className="max-w-7xl mx-auto px-8">
           <div className="bg-white dark:bg-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-glass flex divide-x divide-slate-100 dark:divide-slate-700 animate-fade-in-up transition-colors duration-300" style={{ animationDelay: '500ms' }}>
