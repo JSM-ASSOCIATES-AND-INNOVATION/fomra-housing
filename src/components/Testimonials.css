@@ -1,0 +1,225 @@
+.testimonials-section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.testimonials-header {
+    margin-bottom: 3rem;
+}
+
+.testimonials-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #0198D5;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.testimonials-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    color: #0f172a; /* slate-900 */
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+}
+
+/* MARQUEE CONTAINERS */
+.marquee-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+}
+
+/* Add slight gradient fade at edges */
+.marquee-container::before,
+.marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, #f8fafc 0%, transparent 100%);
+}
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, #f8fafc 0%, transparent 100%);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    will-change: transform;
+}
+
+.track-1 {
+    animation: scroll-left 40s linear infinite;
+}
+
+.track-2 {
+    animation: scroll-right 45s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.33%); }
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(-33.33%); }
+    100% { transform: translateX(0); }
+}
+
+/* CARDS */
+.award-glass-card,
+.review-glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    padding: 2.5rem;
+    width: 420px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-glass-card:hover,
+.review-glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(1, 152, 213, 0.4);
+    box-shadow: 0 20px 40px rgba(1, 152, 213, 0.1);
+}
+
+/* Award Card specifics */
+.award-icon-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+}
+.accent-icon {
+    color: #0198D5;
+}
+
+.award-issuer {
+    font-size: 0.85rem;
+    color: #64748b; /* slate-500 */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.award-title {
+    font-size: 1.25rem;
+    color: #0f172a; /* slate-900 */
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+.award-desc {
+    color: #475569; /* slate-600 */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Review Card specifics */
+.review-customer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.customer-badge {
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.g-blue { color: #4285F4; }
+.g-red { color: #EA4335; }
+.g-yellow { color: #FBBC05; }
+.g-green { color: #34A853; }
+.customer-review-text {
+    color: #64748b;
+    margin-left: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+.review-stars {
+    display: flex;
+    gap: 2px;
+}
+.review-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #475569;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+.review-author-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+}
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(1, 152, 213, 0.2);
+}
+.author-name {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.author-role {
+    color: #64748b;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 4rem 0;
+    }
+    .testimonials-header {
+        text-align: center;
+    }
+    .award-glass-card,
+    .review-glass-card {
+        width: 340px;
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,8 @@
+/* App-level overrides — Tailwind handles all utility styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
