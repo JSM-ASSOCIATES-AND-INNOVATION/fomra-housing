@@ -50,12 +50,22 @@ export default {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        marqueeVertical: {
+          '0%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
+        marqueeVerticalReverse: {
+          '0%': { transform: 'translateY(-50%)' },
+          '100%': { transform: 'translateY(0%)' },
         }
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out forwards',
         'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'marquee': 'marquee 40s linear infinite',
+        'marquee-vertical': 'marqueeVertical 40s linear infinite',
+        'marquee-vertical-reverse': 'marqueeVerticalReverse 40s linear infinite',
       },
     },
   },
