@@ -16,12 +16,12 @@ const About = () => {
             {/* Image Collage */}
             <div className="grid grid-cols-2 gap-4">
               <img 
-                src="/fomra-hues-about.jpg" 
+                src="/real-terrace.png" 
                 alt="Fomra Architecture" 
                 className="w-full h-80 object-cover rounded-2xl shadow-soft transform translate-y-8"
               />
               <img 
-                src="/terrace.png" 
+                src="/real-pool.png" 
                 alt="Fomra Landscape" 
                 className="w-full h-80 object-cover rounded-2xl shadow-soft"
               />

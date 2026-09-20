@@ -12,7 +12,7 @@ const Projects = () => {
         location: "Porur",
         type: "Premium Apartments",
         status: "Under Construction",
-        image: "/fomra-hues-hero.jpg",
+        image: "/real-building.png",
         features: ["2 & 3 BHK", "Smart Homes", "Clubhouse"]
       },
       {
@@ -21,7 +21,7 @@ const Projects = () => {
         location: "ECR",
         type: "Luxury Villas",
         status: "Nearing Completion",
-        image: "/fomra-hues-about.jpg",
+        image: "/real-pool.png",
         features: ["Sea View", "Private Pool", "Home Automation"]
       }
     ],
@@ -32,7 +32,7 @@ const Projects = () => {
         location: "Nolambur",
         type: "Residential Apartments",
         status: "Sold Out",
-        image: "/fomra-hues-hero.jpg",
+        image: "/real-courtyard.png",
         features: ["Ready to Occupy", "Premium Amenities", "Prime Location"]
       },
       {
@@ -41,7 +41,7 @@ const Projects = () => {
         location: "Mogappair",
         type: "Gated Community",
         status: "Sold Out",
-        image: "/fomra-hues-about.jpg",
+        image: "/real-terrace.png",
         features: ["2, 3 & 4 BHK", "Extensive Landscaping", "Sports Arena"]
       }
     ]

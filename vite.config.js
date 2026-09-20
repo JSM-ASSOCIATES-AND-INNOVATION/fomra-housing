@@ -9,4 +9,8 @@ export default defineConfig({
       include: '**/*.{jsx,js}',
     }),
   ],
+  server: {
+    port: 5175,
+    strictPort: true,
+  },
 })

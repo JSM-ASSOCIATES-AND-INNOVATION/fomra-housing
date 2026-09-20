@@ -27,12 +27,12 @@ const FomraInsightsFAQ = () => {
     {
       category: "Real Estate Guide",
       title: "Why Porur is the ultimate destination for luxury apartments in 2024",
-      image: "/fomra-hues-hero.jpg"
+      image: "/real-courtyard.png"
     },
     {
       category: "Investment",
       title: "Villa Plots vs Apartments: Which offers better ROI in Chennai?",
-      image: "/fomra-hues-about.jpg"
+      image: "/real-building.png"
     }
   ];
 

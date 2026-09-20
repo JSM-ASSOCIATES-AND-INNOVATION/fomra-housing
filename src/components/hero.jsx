@@ -14,7 +14,7 @@ const FomraHero = () => {
         
         {/* Luxury Real Estate Image from Unsplash */}
         <img 
-          src="/fomra-hues-hero.jpg" 
+          src="/real-building.png" 
           alt="Fomra Hues Premium Apartments" 
           className="w-full h-full object-cover animate-[slowZoom_30s_ease-in-out_infinite_alternate]"
         />
