@@ -50,7 +50,7 @@ const Projects = () => {
   const currentProjects = projects[activeTab];
 
   return (
-    <section id="projects-section" className="py-24 bg-slate-50 dark:bg-slate-800 transition-colors duration-300 relative overflow-hidden">
+    <section id="projects-section" className="min-h-screen flex flex-col justify-center py-12 lg:py-16 bg-slate-50 dark:bg-slate-800 transition-colors duration-300 relative overflow-hidden">
       
       {/* Decorative Blur */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-fomra-blue/5 dark:bg-fomra-blue/10 rounded-full blur-[120px] pointer-events-none"></div>
@@ -58,7 +58,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-4 lg:mb-6 lg:mb-12">
           <h4 className="text-sm font-bold text-fomra-blue tracking-widest uppercase mb-3">Our Portfolio</h4>
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-6">
             Architectural <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-[#0198D5]">Masterpieces</span>
@@ -69,7 +69,7 @@ const Projects = () => {
         </div>
 
         {/* Animated Tabs */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-4 lg:mb-6 lg:mb-12">
           <div className="relative inline-flex bg-white dark:bg-slate-900 p-2 rounded-full shadow-sm border border-slate-200 dark:border-slate-700 backdrop-blur-xl">
             {/* Sliding Pill Indicator */}
             <div 
@@ -98,14 +98,14 @@ const Projects = () => {
         </div>
 
         {/* Project Grid */}
-        <div className="grid lg:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
           {currentProjects.map((project) => (
             <div 
               key={project.id} 
               className="group relative bg-white dark:bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             >
               {/* Premium Image Placeholder with Gradient */}
-              <div className="relative w-full h-80 overflow-hidden">
+              <div className="relative w-full h-48 lg:h-56 overflow-hidden">
                 <div className="absolute inset-0 bg-slate-900/20 dark:bg-slate-900/40 group-hover:bg-transparent transition-colors duration-700 z-10 cursor-pointer"></div>
                 <img 
                   src={project.image} 
@@ -126,18 +126,18 @@ const Projects = () => {
               </div>
 
               {/* Content Section */}
-              <div className="p-10">
+              <div className="p-6 lg:p-8">
                 <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 mb-4 text-sm font-bold uppercase tracking-widest">
                   <MapPin size={16} className="text-fomra-blue" />
                   {project.location}, Chennai
                 </div>
                 
-                <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-8 group-hover:text-fomra-blue transition-colors duration-300">
+                <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4 lg:mb-6 group-hover:text-fomra-blue transition-colors duration-300">
                   {project.title}
                 </h3>
                 
                 {/* Features Grid */}
-                <div className="grid grid-cols-2 gap-y-4 gap-x-2 mb-10 pb-10 border-b border-slate-100 dark:border-slate-800">
+                <div className="grid grid-cols-2 gap-y-4 gap-x-2 mb-6 pb-6 border-b border-slate-100 dark:border-slate-800">
                   {project.features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-2.5 text-slate-700 dark:text-slate-300 font-medium">
                       <div className="w-6 h-6 rounded-full bg-slate-50 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">

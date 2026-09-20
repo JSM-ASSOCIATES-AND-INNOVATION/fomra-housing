@@ -3,7 +3,7 @@ import { MapPin, PhoneCall, ArrowRight, ShieldCheck, Banknote, Clock } from 'luc
 
 const FomraHero = () => {
   return (
-    <div className="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-visible bg-slate-900">
+    <div className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-visible bg-slate-900">
       
       {/* Cinematic Background Image with Slow Zoom */}
       <div className="absolute inset-0 z-0 overflow-hidden">

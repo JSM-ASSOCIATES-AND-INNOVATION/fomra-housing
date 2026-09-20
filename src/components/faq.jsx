@@ -37,8 +37,8 @@ const FomraInsightsFAQ = () => {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen flex flex-col justify-center py-12 lg:py-16 bg-white dark:bg-slate-900 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-8">
         
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           
@@ -62,7 +62,7 @@ const FomraInsightsFAQ = () => {
                 >
                   <button 
                     onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
-                    className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 focus:outline-none"
+                    className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 focus:outline-none"
                   >
                     <span className={`font-bold text-lg transition-colors ${openFaq === index ? 'text-fomra-blue' : 'text-slate-900 dark:text-white hover:text-fomra-blue dark:hover:text-fomra-blue'}`}>
                       {faq.question}
@@ -75,7 +75,7 @@ const FomraInsightsFAQ = () => {
                   <div 
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
                   >
-                    <div className="px-6 pb-6 pt-0 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                    <div className="px-5 pb-6 pt-0 text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                       {faq.answer}
                     </div>
                   </div>
@@ -83,7 +83,7 @@ const FomraInsightsFAQ = () => {
               ))}
             </div>
             
-            <div className="mt-8">
+            <div className="mt-6">
               <a href="#" className="inline-flex items-center gap-2 text-slate-900 dark:text-white font-bold hover:text-fomra-blue dark:hover:text-fomra-blue transition-colors group">
                 View all FAQs <ArrowRight size={16} className="transform group-hover:translate-x-2 transition-transform" />
               </a>
@@ -102,7 +102,7 @@ const FomraInsightsFAQ = () => {
               </p>
             </div>
 
-            <div className="grid gap-8">
+            <div className="grid gap-6">
               {insights.map((post, index) => (
                 <div key={index} className="group relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-soft border border-slate-100 dark:border-slate-700 cursor-pointer h-72">
                   <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors duration-500 z-10"></div>
@@ -114,7 +114,7 @@ const FomraInsightsFAQ = () => {
                     className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   
-                  <div className="absolute inset-0 z-20 p-8 flex flex-col justify-between">
+                  <div className="absolute inset-0 z-20 p-6 flex flex-col justify-between">
                     <span className="self-start px-4 py-1.5 bg-white/20 backdrop-blur-md text-white text-xs font-bold uppercase tracking-wider rounded-full border border-white/20 shadow-sm">
                       {post.category}
                     </span>
@@ -132,8 +132,8 @@ const FomraInsightsFAQ = () => {
               ))}
             </div>
 
-            <div className="mt-8 text-right">
-              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-full text-sm font-bold tracking-wide hover:bg-fomra-blue hover:text-white dark:hover:bg-fomra-blue dark:hover:text-white transition-all shadow-sm">
+            <div className="mt-6 text-right">
+              <a href="#" className="inline-flex items-center gap-2 px-5 py-3 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-full text-sm font-bold tracking-wide hover:bg-fomra-blue hover:text-white dark:hover:bg-fomra-blue dark:hover:text-white transition-all shadow-sm">
                 Explore Blog
               </a>
             </div>

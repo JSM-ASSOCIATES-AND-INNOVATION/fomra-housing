@@ -3,7 +3,7 @@ import { Target, Eye, Shield, Users, Award, Handshake } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about-section" className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300 relative overflow-hidden">
+    <section id="about-section" className="min-h-screen flex flex-col justify-center py-12 lg:py-16 bg-white dark:bg-slate-900 transition-colors duration-300 relative overflow-hidden">
       
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-b from-slate-50 to-white dark:from-slate-800/20 dark:to-slate-900 -z-10 transform -skew-x-12 translate-x-20"></div>
@@ -11,19 +11,19 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* About Section Header */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-8 lg:mb-16">
           <div className="relative">
             {/* Image Collage */}
             <div className="grid grid-cols-2 gap-4">
               <img 
                 src="/real-terrace.png" 
                 alt="Fomra Architecture" 
-                className="w-full h-80 object-cover rounded-2xl shadow-soft transform translate-y-8"
+                className="w-full h-48 lg:h-64 object-cover rounded-2xl shadow-soft transform translate-y-8"
               />
               <img 
                 src="/real-pool.png" 
                 alt="Fomra Landscape" 
-                className="w-full h-80 object-cover rounded-2xl shadow-soft"
+                className="w-full h-48 lg:h-64 object-cover rounded-2xl shadow-soft"
               />
             </div>
             
@@ -58,10 +58,10 @@ const About = () => {
         </div>
 
         {/* Vision & Mission - Architectural Layout */}
-        <div className="grid md:grid-cols-2 gap-px bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 mb-32 shadow-soft">
+        <div className="grid md:grid-cols-2 gap-px bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 mb-8 lg:mb-16 shadow-soft">
           
-          <div className="bg-white dark:bg-slate-900 p-12 md:p-16 relative group overflow-hidden">
-            <div className="absolute -right-12 -top-12 text-[240px] text-slate-50 dark:text-slate-800/40 font-serif font-black leading-none select-none group-hover:scale-105 transition-transform duration-1000 ease-out">V</div>
+          <div className="bg-white dark:bg-slate-900 p-8 lg:p-6 lg:p-8 relative group overflow-hidden">
+            <div className="absolute -right-12 -top-12 text-[120px] lg:text-[160px] text-slate-50 dark:text-slate-800/40 font-serif font-black leading-none select-none group-hover:scale-105 transition-transform duration-1000 ease-out">V</div>
             <div className="relative z-10">
               <div className="w-12 h-1 bg-fomra-blue mb-8"></div>
               <h3 className="text-4xl font-serif text-slate-900 dark:text-white mb-6">Our Vision</h3>
@@ -71,8 +71,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-slate-900 p-12 md:p-16 relative group overflow-hidden">
-            <div className="absolute -right-12 -top-12 text-[240px] text-slate-50 dark:text-slate-800/40 font-serif font-black leading-none select-none group-hover:scale-105 transition-transform duration-1000 ease-out">M</div>
+          <div className="bg-white dark:bg-slate-900 p-8 lg:p-6 lg:p-8 relative group overflow-hidden">
+            <div className="absolute -right-12 -top-12 text-[120px] lg:text-[160px] text-slate-50 dark:text-slate-800/40 font-serif font-black leading-none select-none group-hover:scale-105 transition-transform duration-1000 ease-out">M</div>
             <div className="relative z-10">
               <div className="w-12 h-1 bg-fomra-blue mb-8"></div>
               <h3 className="text-4xl font-serif text-slate-900 dark:text-white mb-6">Our Mission</h3>
@@ -84,8 +84,8 @@ const About = () => {
         </div>
 
         {/* The Pillars (Why Choose Us) - Editorial Grid */}
-        <div className="mb-24">
-          <div className="mb-12">
+        <div className="mb-8 lg:mb-16">
+          <div className="mb-8">
             <h2 className="text-4xl md:text-5xl font-serif font-medium text-slate-900 dark:text-white tracking-tight">
               The Pillars of Fomra
             </h2>
@@ -93,7 +93,7 @@ const About = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 shadow-sm">
             
-            <div className="bg-white dark:bg-slate-900 p-10 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-300">
+            <div className="bg-white dark:bg-slate-900 p-6 lg:p-8 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-300">
               <span className="block font-serif font-medium italic text-fomra-blue text-xl mb-6">01</span>
               <h4 className="text-xl font-serif font-medium text-slate-900 dark:text-white mb-4">100% Transparency</h4>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-sans">
@@ -101,7 +101,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 p-10 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-300">
+            <div className="bg-white dark:bg-slate-900 p-6 lg:p-8 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-300">
               <span className="block font-serif font-medium italic text-fomra-blue text-xl mb-6">02</span>
               <h4 className="text-xl font-serif font-medium text-slate-900 dark:text-white mb-4">Customer First</h4>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-sans">
@@ -109,7 +109,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 p-10 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-300">
+            <div className="bg-white dark:bg-slate-900 p-6 lg:p-8 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-300">
               <span className="block font-serif font-medium italic text-fomra-blue text-xl mb-6">03</span>
               <h4 className="text-xl font-serif font-medium text-slate-900 dark:text-white mb-4">Premium Locations</h4>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-sans">
@@ -117,7 +117,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 p-10 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-300">
+            <div className="bg-white dark:bg-slate-900 p-6 lg:p-8 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-300">
               <span className="block font-serif font-medium italic text-fomra-blue text-xl mb-6">04</span>
               <h4 className="text-xl font-serif font-medium text-slate-900 dark:text-white mb-4">Uncompromising Quality</h4>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-sans">

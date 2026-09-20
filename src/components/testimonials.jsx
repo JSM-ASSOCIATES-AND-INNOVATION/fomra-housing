@@ -76,7 +76,7 @@ const videoTestimonials = [
 const AwardCard = ({ award }) => (
     <div className="w-[300px] sm:w-[350px] flex-shrink-0 bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-soft border border-slate-100 dark:border-slate-700 group flex flex-col justify-between">
         {award.image && (
-            <div className="w-full h-40 sm:h-48 bg-white dark:bg-slate-900 mb-4 sm:mb-6 flex items-center justify-center p-4 sm:p-6 border-b border-slate-100 dark:border-slate-700">
+            <div className="w-full h-24 sm:h-32 bg-white dark:bg-slate-900 mb-4 sm:mb-6 flex items-center justify-center p-4 sm:p-6 border-b border-slate-100 dark:border-slate-700">
                 <img src={award.image} alt={award.title} className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply dark:mix-blend-normal" />
             </div>
         )}
@@ -92,7 +92,7 @@ const AwardCard = ({ award }) => (
 );
 
 const ReviewCard = ({ review }) => (
-    <div className="w-[320px] sm:w-[400px] flex-shrink-0 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-3xl shadow-soft border border-slate-100 dark:border-slate-700 group flex flex-col justify-between">
+    <div className="w-[320px] sm:w-[400px] flex-shrink-0 bg-white dark:bg-slate-800 p-5 lg:p-6 rounded-3xl shadow-soft border border-slate-100 dark:border-slate-700 group flex flex-col justify-between">
         <div>
             <div className="flex items-center justify-between mb-4 sm:mb-6">
                 <div className="px-3 py-1 bg-[#0198D5]/10 dark:bg-[#0198D5]/20 rounded-full">
@@ -104,7 +104,7 @@ const ReviewCard = ({ review }) => (
                     ))}
                 </div>
             </div>
-            <p className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic mb-6 sm:mb-8 text-sm sm:text-lg">"{review.text}"</p>
+            <p className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic mb-4 text-sm sm:text-lg">"{review.text}"</p>
         </div>
         <div className="flex items-center gap-4 mt-auto border-t border-slate-100 dark:border-slate-700 pt-4 sm:pt-6">
             {review.image ? (
@@ -127,7 +127,7 @@ const ReviewCard = ({ review }) => (
 
 const VideoCard = ({ video, onClick }) => (
     <div 
-      className="relative w-[280px] sm:w-[350px] md:w-[400px] flex-shrink-0 h-[220px] md:h-[250px] lg:h-[300px] rounded-3xl overflow-hidden cursor-pointer group shadow-soft"
+      className="relative w-[280px] sm:w-[350px] md:w-[400px] flex-shrink-0 h-[180px] md:h-[200px] lg:h-[220px] rounded-3xl overflow-hidden cursor-pointer group shadow-soft"
       onClick={() => onClick(video)}
     >
         <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors duration-500 z-10"></div>
@@ -157,18 +157,18 @@ const Testimonials = () => {
     const [activeVideo, setActiveVideo] = useState(null);
 
     return (
-        <section className="py-16 sm:py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 overflow-hidden" id="testimonials">
+        <section id="testimonials" className="min-h-screen flex flex-col justify-center py-12 lg:py-16 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Awards Header */}
-                <div className="text-center mb-10 sm:mb-16">
+                <div className="text-center mb-6 lg:mb-10">
                     <h4 className="text-xs sm:text-sm font-bold text-[#0198D5] tracking-widest uppercase mb-2 sm:mb-3">Awards & Recognition</h4>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Excellence in Real Estate</h2>
                     <div className="h-1 w-16 sm:w-24 bg-[#0198D5] rounded-full mx-auto mt-4 sm:mt-6"></div>
                 </div>
 
                 {/* Awards Marquee */}
-                <div className="relative w-full overflow-hidden pb-8 sm:pb-12 group">
+                <div className="relative w-full overflow-hidden pb-4 lg:pb-8 group">
                     <div className="flex gap-4 sm:gap-8 w-max animate-marquee group-hover:[animation-play-state:paused]" style={{ animationDuration: '30s' }}>
                         {awards.map((award) => (
                             <AwardCard key={award.id} award={award} />
@@ -180,13 +180,13 @@ const Testimonials = () => {
                 </div>
 
                 {/* Video Testimonials Header */}
-                <div className="text-center mb-10 sm:mb-16 mt-8 sm:mt-12">
+                <div className="text-center mb-6 lg:mb-10 mt-4 lg:mt-8">
                     <h4 className="text-xs sm:text-sm font-bold text-[#0198D5] tracking-widest uppercase mb-2 sm:mb-3">Client Stories</h4>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Hear From Our Family</h2>
                     <div className="h-1 w-16 sm:w-24 bg-[#0198D5] rounded-full mx-auto mt-4 sm:mt-6"></div>
                 </div>
 
-                <div className="relative w-full overflow-hidden pb-8 sm:pb-12 mb-10 sm:mb-16 group">
+                <div className="relative w-full overflow-hidden pb-4 lg:pb-8 mb-6 lg:mb-10 group">
                     <div className="flex gap-4 sm:gap-8 w-max animate-marquee group-hover:[animation-play-state:paused]" style={{ animationDuration: '45s' }}>
                         {videoTestimonials.map((video) => (
                             <VideoCard key={video.id} video={video} onClick={setActiveVideo} />
@@ -198,14 +198,14 @@ const Testimonials = () => {
                 </div>
 
                 {/* Text Testimonials Header */}
-                <div className="text-center mb-10 sm:mb-16">
+                <div className="text-center mb-6 lg:mb-10">
                     <h4 className="text-xs sm:text-sm font-bold text-[#0198D5] tracking-widest uppercase mb-2 sm:mb-3">Written Reviews</h4>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Client Perspectives</h2>
                     <div className="h-1 w-16 sm:w-24 bg-[#0198D5] rounded-full mx-auto mt-4 sm:mt-6"></div>
                 </div>
 
                 {/* Testimonials Marquee */}
-                <div className="relative w-full overflow-hidden pb-8 sm:pb-12 group">
+                <div className="relative w-full overflow-hidden pb-4 lg:pb-8 group">
                     <div className="flex gap-4 sm:gap-8 w-max animate-marquee group-hover:[animation-play-state:paused]" style={{ animationDuration: '40s' }}>
                         {customerReviews.map((review) => (
                             <ReviewCard key={review.id} review={review} />
